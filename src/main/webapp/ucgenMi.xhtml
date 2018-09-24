@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Üçgen Mi</title>
+    </h:head>
+    <h:body>
+        <h:form id="ucgenForm">
+            <div align="center">
+                <p:growl sticky="true" globalOnly="true" showDetail="true"/>
+                <p:panelGrid columns="3" style="position: relative; top: 150px;">
+                    <f:facet name="header">3 KENARI DA GİRİNİZ</f:facet>
+                    <p:inputText value="#{webMB.kenar1}"/>
+                    <p:inputText value="#{webMB.kenar2}"/>
+                    <p:inputText value="#{webMB.kenar3}"/>
+                    <f:facet name="footer">
+                        <div align="center">
+                            <p:commandButton value="KONTROL ET" update="ucgenForm" action="#{webMB.ucgenMi()}"/>
+                        </div>
+                    </f:facet>
+                </p:panelGrid>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
