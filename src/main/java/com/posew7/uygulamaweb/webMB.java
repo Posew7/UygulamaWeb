@@ -12,8 +12,28 @@ public class webMB {
     private int kenar1;
     private int kenar2;
     private int kenar3;
+    private int sayi;
 
     public webMB() {
+    }
+
+    public String tekmiciftmi() {
+
+        if (sayi % 2 == 0) {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("bu sayı çifttir", ""));
+        } else {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("bu sayı tektir", ""));
+        }
+
+        return "";
+    }
+
+    public int getSayi() {
+        return sayi;
+    }
+
+    public void setSayi(int sayi) {
+        this.sayi = sayi;
     }
 
     public String ucgenMi() {

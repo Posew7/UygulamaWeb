@@ -5,20 +5,18 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Üçgen Mi</title>
+        <title>Tek mi Çift mi</title>
     </h:head>
     <h:body>
-        <h:form id="ucgenForm">
+        <h:form id="form">
             <div align="center">
-                <p:messages showDetail="true" globalOnly="true"/>
-                <p:panelGrid columns="3" style="position: relative; top: 150px;">
-                    <f:facet name="header">3 KENARI DA GİRİNİZ</f:facet>
-                    <p:inputText value="#{webMB.kenar1}"/>
-                    <p:inputText value="#{webMB.kenar2}"/>
-                    <p:inputText value="#{webMB.kenar3}"/>
+                <p:messages globalOnly="true"/>
+                <p:panelGrid columns="1" style="position: relative; top: 150px;">
+                    <f:facet name="header">BİR SAYI GİRİNİZ</f:facet>
+                    <p:inputText value="#{webMB.sayi}"/>
                     <f:facet name="footer">
                         <div align="center">
-                            <p:commandButton value="KONTROL ET" update="ucgenForm" action="#{webMB.ucgenMi()}"/>
+                            <p:commandButton value="KONTROL ET" update="form" action="#{webMB.tekmiciftmi()}"/>
                         </div>
                     </f:facet>
                 </p:panelGrid>
